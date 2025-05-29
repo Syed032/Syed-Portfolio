@@ -2,157 +2,129 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     font-family: sans-serif;
-}
-
-h1{
+    color: beige;
+  }
+  
+  h1 {
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.main {
+  }
+  
+  .main {
     width: 100%;
-    background: url(portfolio1.jpg);
-    background-position: center;
-    background-size: cover;
     height: 100vh;
-    position: relative;
-}
-
-.navbar {
+    background: url('portfolio1.jpg') center/cover no-repeat;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+  }
+  
+  .navbar {
     padding: 20px;
-}
-
-.navbar img {
-    height: 100px;
-}
-
-.navbar ul {
-    list-style: none;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .content {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+    padding: 20px 7%;
     gap: 20px;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .info {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .info h1 {
+    font-size: 45px;
+  }
+  
+  .info h3 {
     font-size: 16px;
-    transition: .4s ease;
-}
-
-ul li a:hover{
+    line-height: 1.6;
+  }
+  
+  .info span {
     color: orange;
-}
-
-.info{
-    margin-left: 7%;
-    margin-top: 3%;
-    max-width: 850px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.info h1{
-    font-size: 65px;
-    color: beige;
-}
-
-.info h3{
-    font-size: 18px;
-    letter-spacing: 1px;
-    line-height: 24px;
-    color: beige;
-}
-
-
-
-.info span{
-    color: orange;
-}
-
-.image{
-    width: 10%;
-    height: 10%;
-    position: absolute;
-    right: 100px;
-    bottom: 0;
-}
-
-.image img {
-    position: absolute;
-    height: 840%;
-    left: 5%;
-    transform: translate(-50%);
-    bottom: 0;
-    transition: left 2s ease;
-
+  }
+  
+  .image {
+    flex-shrink: 0;
+    max-width: 350px;
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
     filter: drop-shadow(0 0 5px white)
             drop-shadow(0 0 10px white)
             drop-shadow(0 0 15px orange);
-
     transition: transform 0.3s ease;
-}
-
-.image img:hover {
-    transform: scale(1.05) translate(-50%);
+  }
+  
+  .image img:hover {
+    transform: scale(1.05);
     filter: drop-shadow(0 0 8px white)
             drop-shadow(0 0 15px orange)
             drop-shadow(0 0 25px orange);
-}
-
-.social-icons {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+  }
+  
+  .button-container {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
   }
   
-  .social-icons a {
-    color: white;
-    font-size: 28px;
-    transition: transform 0.3s, color 0.3s;
-  }
-  
-  .social-icons a:hover {
-    color: orange;
-    transform: scale(1.2);
-  }
-  
-.image :hover .syed{
-    left: 55%;
-}
-
-
-.button-container{
-    display: flex;
-    gap: 20px;
-}
-
-.btn{
+  .btn {
     text-decoration: none;
     color: white;
-    font-size: 18px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
     padding: 10px 20px;
     border-radius: 30px;
+    background-color: rgb(90, 2, 2);
     display: flex;
     align-items: center;
-    gap: 30px;
-    justify-content: left;
+    gap: 10px;
     box-shadow: 0 0 8px white, 0 0 7px orange;
-    transition: transform 0.2;
-    background-color: rgb(90, 2, 2);
-    width: fit-content;
-    margin-left: 7%;
-    margin-top: 1%;
-
-    
-}
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    background-color: darkorange;
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .image {
+      max-width: 200px;
+    }
+  
+    .info h1 {
+      font-size: 32px;
+    }
+  
+    .info h3 {
+      font-size: 14px;
+    }
+  
+    .btn {
+      font-size: 14px;
+    }
+  }
+  
