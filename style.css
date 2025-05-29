@@ -8,7 +8,7 @@ body {
     font-family: sans-serif;
 }
 
-h1 {
+h1{
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -47,48 +47,50 @@ h1 {
     transition: .4s ease;
 }
 
-ul li a:hover {
+ul li a:hover{
     color: orange;
 }
 
-.info {
+.info{
     margin-left: 7%;
     margin-top: 3%;
     max-width: 850px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.info h1 {
+.info h1{
     font-size: 65px;
     color: beige;
 }
 
-.info h3 {
+.info h3{
     font-size: 18px;
     letter-spacing: 1px;
     line-height: 24px;
     color: beige;
 }
 
-.info span {
+
+
+.info span{
     color: orange;
 }
 
-/* ✅ Fixed only this block */
-.image {
-    width: auto;
-    max-width: 350px;
+.image{
+    width: 10%;
+    height: 10%;
     position: absolute;
     right: 100px;
     bottom: 0;
 }
 
 .image img {
-    height: 100%;
-    max-height: 90vh;
-    position: relative;
-    left: 0;
+    position: absolute;
+    height: 840%;
+    left: 5%;
+    transform: translate(-50%);
     bottom: 0;
+    transition: left 2s ease;
 
     filter: drop-shadow(0 0 5px white)
             drop-shadow(0 0 10px white)
@@ -98,7 +100,7 @@ ul li a:hover {
 }
 
 .image img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) translate(-50%);
     filter: drop-shadow(0 0 8px white)
             drop-shadow(0 0 15px orange)
             drop-shadow(0 0 25px orange);
@@ -111,29 +113,30 @@ ul li a:hover {
     transform: translateX(-50%);
     display: flex;
     gap: 20px;
-}
-
-.social-icons a {
+  }
+  
+  .social-icons a {
     color: white;
     font-size: 28px;
     transition: transform 0.3s, color 0.3s;
-}
-
-.social-icons a:hover {
+  }
+  
+  .social-icons a:hover {
     color: orange;
     transform: scale(1.2);
-}
-
-.image :hover .syed {
+  }
+  
+.image :hover .syed{
     left: 55%;
 }
 
-.button-container {
+
+.button-container{
     display: flex;
     gap: 20px;
 }
 
-.btn {
+.btn{
     text-decoration: none;
     color: white;
     font-size: 18px;
@@ -150,4 +153,6 @@ ul li a:hover {
     width: fit-content;
     margin-left: 7%;
     margin-top: 1%;
+
+    
 }
